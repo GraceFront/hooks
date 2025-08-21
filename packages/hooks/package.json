@@ -53,6 +53,5 @@
   },
   "repository": "https://github.com/GraceFront/hooks.git",
   "homepage": "https://github.com/GraceFront/hooks.git",
-  "license": "MIT",
-  "packageManager": "pnpm@10.15.0"
+  "license": "MIT"
 }
