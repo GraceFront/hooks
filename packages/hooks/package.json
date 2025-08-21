@@ -1,0 +1,58 @@
+{
+  "name": "@gracefront/hooks",
+  "version": "1.0.0",
+  "author": "justchenyu",
+  "description": "A modern hooks library for React",
+  "keywords": [
+    "react",
+    "hooks",
+    "library"
+  ],
+  "scripts": {
+    "build": "rollup --config rollup.config.ts --configPlugin typescript",
+    "test": "vitest run",
+    "test:cov": "vitest run --coverage"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "main": "./dist/lib/index.cjs",
+  "module": "./dist/es/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/es/index.js",
+      "require": "./dist/lib/index.cjs",
+      "default": "./dist/es/index.js"
+    },
+    "./*": {
+      "types": "./dist/types/*/index.d.ts",
+      "import": "./dist/es/*/index.js",
+      "require": "./dist/lib/*/index.cjs",
+      "default": "./dist/es/*/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "package.json"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.6",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-typescript": "^12.1.4",
+    "rollup-plugin-dts": "^6.2.3",
+    "tslib": "^2.8.1"
+  },
+  "repository": "https://github.com/GraceFront/hooks.git",
+  "homepage": "https://github.com/GraceFront/hooks.git",
+  "license": "MIT",
+  "packageManager": "pnpm@10.14.0"
+}

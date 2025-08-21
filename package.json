@@ -1,0 +1,55 @@
+{
+  "name": "@gracefront/hooks",
+  "private": "true",
+  "author": "justchenyu",
+  "license": "MIT",
+  "packageManager": "pnpm@10.14.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GraceFront/hooks.git"
+  },
+  "scripts": {
+    "init": "pnpm install && pnpm run build",
+    "build": "pnpm --filter @gracefront/hooks run build",
+    "pub": "pnpm run build && pnpm -r --filter=./packages/* publish",
+    "clean-dist": "rimraf -g packages/*/node_modules packages/*/dist packages/*/README.md",
+    "clean": "pnpm run clean-dist && rimraf node_modules",
+    "test": "pnpm --filter=./packages/* test",
+    "test:strict": "cross-env REACT_MODE=strict pnpm --filter=./packages/* test:cov",
+    "lint": "biome lint --fix",
+    "pretty": "biome format --fix --no-errors-on-unmatched",
+    "lint-staged": "lint-staged",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.2.0",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@testing-library/react": "^16.3.0",
+    "@types/node": "^24.3.0",
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "@vitest/coverage-istanbul": "^3.2.4",
+    "cross-env": "^10.0.0",
+    "husky": "^9.1.7",
+    "jsdom": "^26.1.0",
+    "lint-staged": "^16.1.5",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "rimraf": "^6.0.1",
+    "rollup": "^4.46.2",
+    "vitest": "^3.2.4"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "biome lint --fix",
+      "biome format --write"
+    ],
+    "*.css": [
+      "biome format --write"
+    ],
+    "*.{json,md}": [
+      "biome format --write"
+    ]
+  }
+}
