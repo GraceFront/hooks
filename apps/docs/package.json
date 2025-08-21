@@ -15,7 +15,6 @@
     "gracefront"
   ],
   "license": "MIT",
-  "packageManager": "pnpm@10.15.0",
   "devDependencies": {
     "vitepress": "2.0.0-alpha.12"
   }
