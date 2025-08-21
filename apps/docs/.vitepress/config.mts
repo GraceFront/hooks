@@ -5,6 +5,7 @@ export default defineConfig({
   title: 'GraceFront Hooks',
   description: '一个现代化的 React Hooks 工具库，支持 TypeScript',
 
+  base: '/hooks/',
   locales: {
     root: {
       label: '简体中文',
