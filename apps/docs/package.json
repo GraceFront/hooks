@@ -1,0 +1,22 @@
+{
+  "name": "@gracefront/hooks-docs",
+  "version": "1.0.0",
+  "description": "Documentation site for @gracefront/hooks",
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  },
+  "type": "module",
+  "keywords": [
+    "vitepress",
+    "docs",
+    "react-hooks",
+    "gracefront"
+  ],
+  "license": "MIT",
+  "packageManager": "pnpm@10.15.0",
+  "devDependencies": {
+    "vitepress": "2.0.0-alpha.12"
+  }
+}

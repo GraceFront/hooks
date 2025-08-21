@@ -10,6 +10,9 @@
   },
   "scripts": {
     "init": "pnpm install && pnpm run build",
+    "dev": "pnpm --filter=./apps/docs run docs:dev",
+    "build:docs": "pnpm --filter=./apps/docs run docs:build",
+    "preview:docs": "pnpm --filter=./apps/docs run docs:preview",
     "build": "pnpm --filter @gracefront/hooks run build",
     "pub": "pnpm run build && pnpm -r --filter=./packages/* publish",
     "clean-dist": "rimraf -g packages/*/node_modules packages/*/dist packages/*/README.md",
