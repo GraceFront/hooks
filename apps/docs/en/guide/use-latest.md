@@ -6,24 +6,33 @@ Useful for avoiding stale closures inside callbacks or effects.
 ## Usage
 
 ```tsx
-import { useState, useEffect } from 'react'
-import { useLatest } from '@gracefront/hooks'
+import React, { useState, useEffect } from 'react';
+import { useLatest } from '@gracefront/hooks';
 
-export default function Example() {
-  const [count, setCount] = useState(0)
-  const latestCount = useLatest(count)
+export default () => {
+  const [count, setCount] = useState(0);
+  const [count2, setCount2] = useState(0);
+
+  const latestCountRef = useLatest(count);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      console.log('Current count:', latestCount.current)
-    }, 1000)
+      setCount(latestCountRef.current + 1);
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
-    return () => clearInterval(interval)
-  }, [latestCount])
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCount2(count2 + 1);
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <button onClick={() => setCount(c => c + 1)}>
-      Count: {count}
-    </button>
-  )
-}
+    <>
+      <p>count(useLatest): {count}</p>
+      <p>count(default): {count2}</p>
+    </>
+  );
+};
