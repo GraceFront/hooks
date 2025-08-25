@@ -44,11 +44,13 @@ export default defineConfig({
           '/en/guide/': [
             {
               text: 'Hooks',
-              items: [{ text: 'useLatest', link: '/en/guide/use-latest' }],
-            },
-            {
-              text: 'Hooks',
-              items: [{ text: 'useUnmount', link: '/en/guide/use-unmount' }],
+              items: [
+                { text: 'useLatest', link: '/en/guide/use-latest' },
+                {
+                  text: 'useUnmount',
+                  link: '/en/guide/use-unmount',
+                },
+              ],
             },
           ],
         },
