@@ -13,17 +13,23 @@ export default defineConfig({
       themeConfig: {
         nav: [
           { text: '指南', link: '/guide/use-latest' },
-          { text: 'GitHub', link: 'https://github.com/GraceFront/hooks' }
+          { text: 'GitHub', link: 'https://github.com/GraceFront/hooks' },
         ],
         sidebar: {
           '/guide/': [
             {
               text: 'Hooks',
-              items: [{ text: 'useLatest', link: '/guide/use-latest' }]
-            }
-          ]
-        }
-      }
+              items: [
+                { text: 'useLatest', link: '/guide/use-latest' },
+                {
+                  text: 'useUnmount',
+                  link: '/guide/use-unmount',
+                },
+              ],
+            },
+          ],
+        },
+      },
     },
     en: {
       label: 'English',
@@ -32,17 +38,21 @@ export default defineConfig({
       themeConfig: {
         nav: [
           { text: 'Guide', link: '/en/guide/use-latest' },
-          { text: 'GitHub', link: 'https://github.com/GraceFront/hooks' }
+          { text: 'GitHub', link: 'https://github.com/GraceFront/hooks' },
         ],
         sidebar: {
           '/en/guide/': [
             {
               text: 'Hooks',
-              items: [{ text: 'useLatest', link: '/en/guide/use-latest' }]
-            }
-          ]
-        }
-      }
-    }
-  }
+              items: [{ text: 'useLatest', link: '/en/guide/use-latest' }],
+            },
+            {
+              text: 'Hooks',
+              items: [{ text: 'useUnmount', link: '/en/guide/use-unmount' }],
+            },
+          ],
+        },
+      },
+    },
+  },
 })

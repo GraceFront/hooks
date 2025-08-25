@@ -1,3 +1,4 @@
 import useLatest from './useLatest'
+import useUnmount from './useUnmount'
 
-export { useLatest }
+export { useLatest, useUnmount }

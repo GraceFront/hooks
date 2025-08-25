@@ -14,7 +14,8 @@
         "noNonNullAssertion": "off"
       },
       "correctness": {
-        "useHookAtTopLevel": "error"
+        "useHookAtTopLevel": "error",
+        "useExhaustiveDependencies": "off"
       },
       "suspicious": {
         "noExplicitAny": "off"
