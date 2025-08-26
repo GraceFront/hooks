@@ -25,6 +25,10 @@ export default defineConfig({
                   text: 'useUnmount',
                   link: '/guide/use-unmount',
                 },
+                {
+                  text: 'useMount',
+                  link: '/guide/use-mount',
+                },
               ],
             },
           ],
@@ -49,6 +53,10 @@ export default defineConfig({
                 {
                   text: 'useUnmount',
                   link: '/en/guide/use-unmount',
+                },
+                {
+                  text: 'useMount',
+                  link: '/en/guide/use-mount',
                 },
               ],
             },
